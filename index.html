@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Area Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+        header{
+
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="flex w-[90%] mx-auto bg-primary-content justify-between items-center	rounded-xl	">
+        <div class="logo p-4">
+            <h2 class="text-4xl font-bold">Interactive</h2>
+            <h3 class="text-xl text-gray-500">Geometry Genius</h3>
+        </div>
+        <div class="menu p-4">
+            <button class="btn btn-info">Blog</button>
+        </div>
+    </header>
+
+    <main class="w-[90%] mx-auto flex mt-5">
+        <div class="card-container flex-1 grid grid-cols-3 gap-2">
+            <div class="card bg-base-100 w-[18.5rem] shadow-xl">
+                <figure>
+                  <img class="w-2/4" src="images/triangle.png" alt="Shoes" />
+                </figure>
+                <div class="card-body text-center">
+                  <h2 class="text-2xl">Triangle</h2>
+                  <p>Area (A) = 0.5 * b * h</p>
+                  <div>
+                    <span>Area : </span> <span id="calculatedArea">0</span> <span>cm<sup>2</sup></span>
+                  </div>
+
+                  <div class="">
+                    <input id="baseOfTri" class="bg-gray-200 p-2 w-20" type="text" placeholder="b"> <span>cm</span>
+                    <input id="heightOfTri" class="bg-gray-200 p-2 w-20" type="text" placeholder="h"> <span>cm</span>
+                  </div>
+                  <div class="card-actions justify-center">
+                    <button id="triangle-btn" class="btn btn-primary w-full">calculation</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 w-[18.5rem] shadow-xl">
+              <figure>
+                <img class="w-2/4" src="images/rectangle.png" alt="Shoes" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="text-2xl">Rectangle</h2>
+                <p>Area (A) = W * I</p>
+                <div>
+                  <span>Area : </span> <span id="calculatedRacArea">0</span> <span>cm<sup>2</sup></span>
+                </div>
+                <div class="">
+                  <input id="wideOfRac" class="bg-gray-200 p-2 w-20" type="text" placeholder="b"> <span>cm</span>
+                  <input id="lengthtOfRac" class="bg-gray-200 p-2 w-20" type="text" placeholder="h"> <span>cm</span>
+                </div>
+                <div class="card-actions justify-center">
+                  <button onclick="areaOfRactangle()" class="btn btn-primary w-full">calculation</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-[18.5rem] shadow-xl">
+            <figure>
+              <img class="w-2/4" src="images/parallelogram.png" alt="Shoes" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="text-2xl">Parallelogram</h2>
+              <p>Area (A) = b * h</p>
+              <div>
+                <span>Area : </span> <span id="calculatedParaArea">0</span> <span>cm<sup>2</sup></span>
+              </div>
+              <div class="">
+                <input id="baseOfPara" class="bg-gray-200 p-2 w-20" type="text" placeholder="b"> <span>cm</span>
+                <input id="heightOfPara" class="bg-gray-200 p-2 w-20" type="text" placeholder="h"> <span>cm</span>
+              </div>
+              <div class="card-actions justify-center">
+                <button onclick="areaOfParallelogram()" class="btn btn-primary w-full">calculation</button>
+              </div>
+            </div>
+            </div>
+            <div class="card bg-base-100 w-[18.5rem] shadow-xl">
+          <figure>
+            <img class="w-2/4" src="images/rhombus.png" alt="Shoes" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="text-2xl">Rhombus</h2>
+            <p>Area (A) = 0.5 * d1 * d2</p>
+            <div>
+              <span>Area : </span> <span id="calculatedRhomArea">0</span> <span>cm<sup>2</sup></span>
+            </div>
+            <div class="">
+              <input id="d1OfRhom" class="bg-gray-200 p-2 w-20" type="text" placeholder="b"> <span>cm</span>
+              <input id="d2OfRhom" class="bg-gray-200 p-2 w-20" type="text" placeholder="h"> <span>cm</span>
+            </div>
+            <div class="card-actions justify-center">
+              <button onclick="areaOfRhombus()" class="btn btn-primary w-full">calculation</button>
+            </div>
+          </div>
+            </div>
+        </div>
+
+        <div id="AreaOfCalculation" class="calculation-container w-[13rem] border-2 rounded-xl p-4">
+            <h3 class="text-xl border-b-2"> Area Calculation</h3>
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>    
+</body>
+</html>
